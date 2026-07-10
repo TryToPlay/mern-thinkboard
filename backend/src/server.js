@@ -16,7 +16,7 @@ const __dirname = path.resolve();
 
 setServers(["0.0.0.0", "1.1.1.1", "8.8.8.8"]);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV !== "production") {
     app.use(cors({
         origin: "http://localhost:5173"
     }));
